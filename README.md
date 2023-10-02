@@ -19,24 +19,18 @@ Flow:
 
 Commands:
 
-This will allow to track new POD creation
-
+	This will allow to track new POD creation
 ---
 	kubectl get pods --watch
 ---
-
- We will then install the kubectl tool
-
+ 	We will then install the kubectl tool
 ---
 	az aks install-cli --install-location=./kubectl
 ---
-
-This allows kubectl to connect to the Kubernetes cluster
-
+	This allows kubectl to connect to the Kubernetes cluster
 ---
 	az aks get-credentials --resource-group devopsdanjel-rg --name devopsdanjelAKS 
 ---
-
 Pre-defined Variables:
 
 $(Pipeline.Workspace)
