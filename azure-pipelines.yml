@@ -11,12 +11,12 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '863a36f4-a00f-4aa7-aef9-b9a2777acdfb'
+  dockerRegistryServiceConnection: '98a18787-120d-4b55-b3ef-a3b8ea6f17cf'
   imageRepository: 'samplewebapp'
-  containerRegistry: 'devopsmelacr.azurecr.io'
+  containerRegistry: 'devopsdanjelacr.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'devopsmelacr132827a7-auth'
+  imagePullSecret: 'devopsdanjelacr343c-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -46,12 +46,12 @@ stages:
         SourceFolder: 'manifests/'
         Contents: '**/*.yml'
         TargetFolder: '$(Pipeline.Workspace)/manifests'
-    
+
     - task: PublishPipelineArtifact@1
       inputs:
-       targetPath: '$(Pipeline.Workspace)/manifests'
-       artifact: 'manifests'
-       publishLocation: 'pipeline'
+        targetPath: '$(Pipeline.Workspace)/manifests'
+        artifact: 'manifests'
+        publishLocation: 'pipeline'
 
 - stage: Deploy
   displayName: Deploy stage
@@ -62,7 +62,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'samplewebapp-2040.default'
+    environment: 'samplewebapp-1581.default'
     strategy:
       runOnce:
         deploy:
