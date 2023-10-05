@@ -35,7 +35,8 @@ Flow:
 
 Commands:
 
-	This will allow to track new POD creation
+This will allow to track new POD creation
+
 ---
 	kubectl get pods --watch
 ---
