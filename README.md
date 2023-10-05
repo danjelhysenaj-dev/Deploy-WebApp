@@ -27,7 +27,9 @@ Commands:
 ---
 	az aks install-cli --install-location=./kubectl
 ---
-	This allows kubectl to connect to the Kubernetes cluster
+
+This allows kubectl to connect to the Kubernetes cluster
+
 ---
 	az aks get-credentials --resource-group devopsdanjel-rg --name devopsdanjelAKS 
 ---
