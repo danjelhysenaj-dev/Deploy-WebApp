@@ -1,4 +1,9 @@
 # Deploy-DotNet-WebApp
+# Pipeline Architecture
+
+![kubernetes-Netapp](https://github.com/danjelhysenaj-dev/Deploy-WebApp/assets/72606127/ba6119ae-c24c-4663-84c6-d9ff24f9953d)
+
+
 # samplewebapp
 ASP.NET Web application deployment on Azure Kubernetes Services
 
